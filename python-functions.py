@@ -47,6 +47,7 @@ def baz(start, *args):
     output = output[2:]
     return output
 
+
 def bar(newValue):
     global g
     g = newValue
@@ -80,6 +81,9 @@ def main():
     hex_string = file_md5('/home/python-functions.py')
     print("hash of file {0} = '{1}'".format('/home/python-functions.py', hex_string))
     
+    # By the way -- for the code below to work, it's advised to either (a) create a 
+    # duplicate of this script in the same directory, or (b) create some other files
+    # that may have unique names, but identical content
     for next_hash in folder_md5('/home'):
         print(next_hash)
         
